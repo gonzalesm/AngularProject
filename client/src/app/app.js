@@ -34,7 +34,6 @@
       'ui.router',
       'home',
       'movie-popular',
-      'getting-started',
       'appHeaderComponent',
       'appFooterComponent',
       'common.filters.uppercase',
