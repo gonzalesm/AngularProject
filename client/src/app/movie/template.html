@@ -2,6 +2,33 @@
   <ul>
     <li data-ng-repeat="movie in ::vm.movies track by $index">
       <h2>{{ ::movie.original_title }}</h2>
+
+      <div class="infos">
+        <div class="poster">
+            <img src="http://image.tmdb.org/t/p/w185{{ ::movie.poster_path }}" />
+        </div>
+        <div class="type"></div>
+        <div class="language">{{ ::movie.original_language }}</div>
+        <div class="createdBy">Created By Avatar</div>
+        <p class="overview">
+          {{ ::movie.overview }}
+        </p>
+        <div class="date">
+            <div class="day">25</div>
+            <div class="month">Dec</div>
+        </div>
+        <div class="Backdrops">
+            <ul>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+            </ul>
+        </div>
+        <div class="popularity-bg">
+            <div class="popularity" style="width: ({{ ::movie.vote_average }}*10)%;"></div>
+        <div>
+          {{ ::movie.vote_average }} /10
+        </div>
     </li>
   </ul>
 </div>
