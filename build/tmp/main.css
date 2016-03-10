@@ -53,7 +53,9 @@ h3 {
   font-size: 1.375rem; }
 
 .pure-menu.pure-menu-horizontal {
-  background: #ddd; }
+  background: #001f3f;
+  color: #fff;
+  padding: 15px; }
 
 a {
   color: #0074d9;
@@ -129,11 +131,26 @@ h4 {
   padding: 1rem 0;
   margin: 3px; }
 
-.l-page .pure-g > div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+.l-page {
+  background-color: #131313;
+  color: #ddd; }
+  .l-page .pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
 
+.navbar {
+  margin-bottom: 0;
+  background-color: #2C2C2C;
+  border-color: #4D4C4C;
+  color: #fff; }
+  .navbar .navbar-toggle {
+    border-radius: 0;
+    border: none; }
+  .navbar .navbar-collapse {
+    border-color: #4D4C4C; }
+
+/* Movie Style */
 .popularity-bg {
   height: 15px;
   width: 200px;

@@ -1,8 +1,33 @@
 .l-page {
+
+  background-color: $darkgray;
+  color: $silver;
+
   .pure-g > div {
     @include box-sizing();
   }
 }
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #2C2C2C;
+  border-color: #4D4C4C;
+  color: $white;
+
+  .navbar-toggle {
+    border-radius: 0;
+    border: none;
+  }
+
+  .navbar-collapse {
+    border-color: #4D4C4C;
+  }
+
+}
+
+
+
+/* Movie Style */
 
 .popularity-bg {
   height: 15px;
