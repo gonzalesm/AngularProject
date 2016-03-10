@@ -9,7 +9,7 @@
         </div>
         <div class="type"></div>
         <div class="language">{{ ::movie.original_language }}</div>
-        <div class="createdBy">Created By Avatar</div>
+        <div class="genre">{{ ::movie.genre_ids }}</div>
         <p class="overview">
           {{ ::movie.overview }}
         </p>
@@ -25,7 +25,15 @@
             </ul>
         </div>
         <div class="popularity-bg">
-            <div class="popularity" style="width: ({{ ::movie.vote_average }}*10)%;"></div>
+            <script>
+              var voteAverage = {{ ::movie.vote_average }} * 10;
+              //document.getElementById('vote_average').setAttribute("style","width:"+voteAverage+"%");
+              document.getElementById('vote_average').style.width=voteAverage +'%';
+              console.log(vote_average);
+              alert(vote_average);
+              alert('testt');
+            </script>
+            <div class="popularity" id="vote_average"></div>
         <div>
           {{ ::movie.vote_average }} /10
         </div>
