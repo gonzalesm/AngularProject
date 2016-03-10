@@ -9,7 +9,7 @@
         </div>
         <div class="type"></div>
         <div class="language">{{ ::movie.original_language }}</div>
-        <div class="genre">{{ ::movie.genre_ids }}</div>
+        <div class="genre">{{ ::movie.genre_ids.join(", ") }}</div>
         <p class="overview">
           {{ ::movie.overview }}
         </p>
