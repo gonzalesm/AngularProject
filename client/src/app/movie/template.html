@@ -1,6 +1,8 @@
 <div>
   <ul class="genre-list display-detail">
     <li data-ng-repeat="movie in ::vm.genres track by $index">
+      {{ ::vm.genres }}
+    </li>
   </ul>
   <ul class="movie-list display-detail">
     <li class="movies col-xs-6 col-sm-4 col-md-2 col-lg-2" data-ng-repeat="movie in ::vm.movies track by $index">

@@ -38,11 +38,11 @@
     service.movie = []; // MovieService.movie = [];
 
     /**
-     * Get Movie
+     * Get Genre
      */
-    service.getMovie = function () {
+    service.getGenre = function () {
 
-      var key = '74b2f9ad0983cc2c946949d9e0ecf61a';
+      var key = 'a50dfcb86a14a582d3985d8df03992b7';
 
       return $http.get('http://api.themoviedb.org/3/genre/movie/list', {
           params:{
