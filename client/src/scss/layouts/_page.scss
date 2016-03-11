@@ -46,6 +46,7 @@
       .beta {
         opacity: 0.7;
       }
+
     }
 
     .beta {
@@ -79,13 +80,21 @@
 
 }
 
-@media (max-width: @screen-xs) {
-    body{font-size: 10px;}
+/* Footer Style */
+
+footer {
+  padding: 15px;
+  background-color: #2C2C2C;
+  border-top: 1px solid #4D4C4C;
+  color: #fff;
+
+  .copyright {
+    margin-bottom: 10px;
+  }
+
 }
 
-@media (max-width: @screen-sm) {
-    body{font-size: 14px;}
-}
+
 
 /* Movie Style */
 
@@ -98,11 +107,12 @@ ul.movie-list {
     margin-bottom: 15px;
 
     h3 {
-      font-size: 1em;
+      font-size: 20px;
       text-overflow: ellipsis;
       height: 25px;
       white-space: nowrap;
       overflow: hidden;
+      margin-bottom: 8px;
     }
 
     .poster > img {

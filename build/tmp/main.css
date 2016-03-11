@@ -106,7 +106,7 @@ h4 {
   margin: 0;
   padding: 0;
   border: 0 none;
-  padding: 0 0 2em 0; }
+  padding: 0; }
   .hlist > li {
     display: inline-block;
     margin-left: 1em; }
@@ -182,6 +182,15 @@ h4 {
         color: #fff;
         background-color: #424242; }
 
+/* Footer Style */
+footer {
+  padding: 15px;
+  background-color: #2C2C2C;
+  border-top: 1px solid #4D4C4C;
+  color: #fff; }
+  footer .copyright {
+    margin-bottom: 10px; }
+
 /* Movie Style */
 ul.movie-list {
   padding-left: 0px;
@@ -194,7 +203,8 @@ ul.movie-list {
       text-overflow: ellipsis;
       height: 25px;
       white-space: nowrap;
-      overflow: hidden; }
+      overflow: hidden;
+      margin-bottom: 8px; }
     ul.movie-list li.movies .poster > img {
       padding-left: 0px; }
 
