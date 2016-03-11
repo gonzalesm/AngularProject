@@ -4,7 +4,7 @@
 
       <div class="infos">
         <div class="poster">
-            <img src="http://image.tmdb.org/t/p/w185{{ movieId:movie.poster_path }}" />
+            <img src="http://image.tmdb.org/t/p/w185{{ vm.movies.poster_path }}" />
         </div>
         <div class="type"></div>
         <div class="language">{{ movieId:movie.original_language }}</div>
@@ -23,9 +23,6 @@
               <li><img src="http://image.tmdb.org/t/p/w185{{ movieId:movie.backdrop_path }}" /></li>
             </ul>
         </div>
-        <div class="popularity-bg">
-            <div class="popularity" style="width: ({{ movieId:movie.vote_average }}*10)%;"></div>
-        <div>
           {{ movieId:movie.vote_average }} /10
         </div>
   </ul>
