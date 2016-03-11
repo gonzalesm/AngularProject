@@ -16,9 +16,12 @@
         MovieService.getMovie().then(function(data){
           console.log(data.data.results);
           vm.movies = data.data.results;
+          vm.vote = vm.movies[0].vote_average;
         });
+
       },
-      link: function(scope, elm, attrs) {
+      link: function(scope, elm, attrs, ctrl) {
+        console.log('scope: ', ctrl);
       }
     };
   }
