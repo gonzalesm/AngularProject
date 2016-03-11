@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function movieDetail(MovieService) {
+  function movieDetail(movieDetailService) {
     return {
       restrict: 'EA',
       replace: true,
@@ -13,9 +13,8 @@
       controller: function($log, $stateParams) {
 
         var vm = this;
-        console.log();
-
-        MovieService.getMovie().then(function(data){
+        console.log('stateparams',$stateParams);
+        movieDetailService.getMovie().then(function(data){
           console.log(data.data.results);
           vm.movies = data.data.results;
         });
