@@ -12,7 +12,7 @@
      */
     service.getMovie = function () {
 
-      var key = '74b2f9ad0983cc2c946949d9e0ecf61a';
+      var key = '5bb1ba18b86c3125820db6f794cd67dd';
 
       return $http.get('https://api.themoviedb.org/3/movie/popular', {
           params:{
