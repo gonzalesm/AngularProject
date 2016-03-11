@@ -90,7 +90,7 @@ h4 {
  * Island module that adds padding.
 */
 .island {
-  padding: 1em; }
+  padding: 1em 1em 2em 1em; }
 
 .island3 {
   padding: 3em; }
@@ -183,16 +183,20 @@ h4 {
         background-color: #424242; }
 
 /* Movie Style */
-li.movies {
-  list-style: none; }
-  li.movies h3 {
-    text-overflow: ellipsis;
-    height: 25px;
-    white-space: nowrap;
-    overflow: hidden; }
-
-.movie-list {
-  padding-left: 0px; }
+ul.movie-list {
+  padding-left: 0px;
+  margin: 0; }
+  ul.movie-list li.movies {
+    list-style: none;
+    margin-bottom: 15px; }
+    ul.movie-list li.movies h3 {
+      font-size: 20px;
+      text-overflow: ellipsis;
+      height: 25px;
+      white-space: nowrap;
+      overflow: hidden; }
+    ul.movie-list li.movies .poster > img {
+      padding-left: 0px; }
 
 .display-detail .type, .display-detail .language, .display-detail .createdBy, .display-detail .overview, .display-detail .date, .display-detail .backdrops, .display-detail .popularity-bg {
   display: none; }

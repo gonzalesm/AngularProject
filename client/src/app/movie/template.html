@@ -1,11 +1,11 @@
 <div>
   <ul class="movie-list display-detail">
-    <li class="movies col-xs-6 col-sm-4 col-md-3" data-ng-repeat="movie in ::vm.movies track by $index">
+    <li class="movies col-xs-6 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="movie in ::vm.movies track by $index">
       <h3>{{ ::movie.original_title }}</h3>
 
       <div class="infos">
         <div class="poster">
-            <img src="http://image.tmdb.org/t/p/w185{{ ::movie.poster_path }}" />
+            <img class="col-xs-12 col-sm-10 col-md-12 col-lg-12" src="http://image.tmdb.org/t/p/w185{{ ::movie.poster_path }}" />
         </div>
         <div class="type"></div>
         <div class="language">{{ ::movie.original_language }}</div>
