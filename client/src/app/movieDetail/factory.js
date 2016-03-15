@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function movieDetailService($http, $log) {
+  function movieDetailService($http, $log, $stateParams) {
 
     var service = {};
 
@@ -14,9 +14,13 @@
 
       var key = '5bb1ba18b86c3125820db6f794cd67dd';
 
-      return $http.get('http://api.themoviedb.org/3/movie/stateParams.movie', {
+
+      return $http.get('http://api.themoviedb.org/3/movie/'+ $stateParams.movieId,{
           params:{
-            api_key: key
+
+            api_key: key,
+
+
           }
         })
         .success(function (data) {

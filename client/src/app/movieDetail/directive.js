@@ -13,10 +13,9 @@
       controller: function($log, $stateParams) {
 
         var vm = this;
-        console.log('stateparams',$stateParams);
-        movieDetailService.getMovie().then(function(data){
-          console.log(data.data.results);
-          vm.movies = data.data.results;
+        console.log($stateParams);
+        movieDetailService.getMovie().then(function(response){
+          vm.movie = response.data;
         });
       },
       link: function(scope, elm, attrs) {
@@ -24,6 +23,6 @@
     };
   }
 
-  angular.module('movieDetailDirective', ['services.movie'])
+  angular.module('movieDetailDirective', ['services.movieDetail'])
     .directive('movieDetail', movieDetail);
 })();
