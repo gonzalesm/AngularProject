@@ -1,3 +1,7 @@
+body {
+  background-color: #212121;
+}
+
 .l-page {
 
   background-color: #212121;
@@ -50,7 +54,7 @@
     }
 
     .beta {
-      color: $red;
+      color: $green;
       text-transform: uppercase;
       font-size: 11px;
       vertical-align: text-bottom;
@@ -98,13 +102,87 @@ footer {
 
 /* Movie Style */
 
-ul.movie-list {
+ul.movies {
   padding-left: 0px;
   margin: 0;
 
-  li.movies {
+  li.movie-single {
     list-style: none;
     margin-bottom: 15px;
+
+    .overlay {
+      display: none;
+    }
+
+    &:hover .more-infos {
+      visibility: visible!important;
+      opacity: 1;
+    }
+
+    &:nth-child(6n) .more-infos, &:nth-child(6n+5) .more-infos {
+      left: -366px!important;
+    }
+
+    .more-infos {
+      background: linear-gradient(to bottom right, #7C7C7C, #373737);
+      color: white;
+      position: absolute;
+      height: 241px;
+      width: 351px;
+      top: 52.5px;
+      left: 205px;
+      visibility: hidden;
+      z-index: 2;
+      padding: 25px;
+      opacity: 0;
+      transition: .2s all ease;
+      overflow: hidden;
+
+      h4.title {
+        float: left;
+        width: 100%;
+        line-height: 1.4;
+        font-size: 18px;
+        font-weight: 500;
+        color: rgba(255,255,255,.9);
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        float: left;
+        width: 100%;
+        font-size: 13px;
+        font-weight: normal;
+      }
+
+      .genre {
+        float: left;
+        font-weight: 300;
+        color: rgba(255,255,255,.7);
+        font-size: .75em;
+      }
+
+      .synopsis {
+        float: left;
+        font-weight: 400;
+        color: rgba(255,255,255,.6);
+        line-height: 18px;
+        font-size: .75em;
+      }
+
+    }
+
+    &:hover .poster {
+      background-color: red;
+      opacity: 0.8;
+
+      .overlay {
+        display: block;
+        z-index: 2;
+      }
+
+    }
 
     h3 {
       font-size: 20px;
@@ -117,10 +195,51 @@ ul.movie-list {
 
     .poster > img {
       padding-left: 0px;
+      position: relative;
+      box-sizing: content-box;
+    }
+
+    .hover-flash:hover img {
+    	opacity: 1;
+    	-webkit-animation: flash 1.5s;
+    	animation: flash 1.5s;
+    }
+
+    @-webkit-keyframes flash {
+    	0% {
+    		opacity: .4;
+    	}
+    	100% {
+    		opacity: 1;
+    	}
+    }
+    @keyframes flash {
+    	0% {
+    		opacity: .4;
+    	}
+    	100% {
+    		opacity: 1;
+    	}
+    }
+
+    .icon {
+      display: none;
+      z-index: 2;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 25px;
+      color: white;
+    }
+
+    .hover-flash:hover .icon {
+    	display: block;
     }
 
   }
 }
+
 
 
 
