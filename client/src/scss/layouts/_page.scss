@@ -123,56 +123,6 @@ ul.movies {
       left: -366px!important;
     }
 
-    .more-infos {
-      background: linear-gradient(to bottom right, #7C7C7C, #373737);
-      color: white;
-      position: absolute;
-      height: 241px;
-      width: 351px;
-      top: 52.5px;
-      left: 205px;
-      visibility: hidden;
-      z-index: 2;
-      padding: 25px;
-      opacity: 0;
-      transition: .2s all ease;
-      overflow: hidden;
-
-      h4.title {
-        float: left;
-        width: 100%;
-        line-height: 1.4;
-        font-size: 18px;
-        font-weight: 500;
-        color: rgba(255,255,255,.9);
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-
-      .subtitle {
-        float: left;
-        width: 100%;
-        font-size: 13px;
-        font-weight: normal;
-      }
-
-      .genre {
-        float: left;
-        font-weight: 300;
-        color: rgba(255,255,255,.7);
-        font-size: .75em;
-      }
-
-      .synopsis {
-        float: left;
-        font-weight: 400;
-        color: rgba(255,255,255,.6);
-        line-height: 18px;
-        font-size: .75em;
-      }
-
-    }
-
     &:hover .poster {
       background-color: red;
       opacity: 0.8;
@@ -197,6 +147,7 @@ ul.movies {
       padding-left: 0px;
       position: relative;
       box-sizing: content-box;
+      padding-right: 0;
     }
 
     .hover-flash:hover img {
@@ -240,6 +191,79 @@ ul.movies {
   }
 }
 
+.more-infos {
+  background: linear-gradient(to bottom right, #7C7C7C, #373737);
+  color: white;
+  position: absolute;
+  height: 241px;
+  width: 351px;
+  top: 52.5px;
+  left: 205px;
+  visibility: hidden;
+  z-index: 2;
+  padding: 25px;
+  padding-top: 20px;
+  opacity: 0;
+  transition: .2s all ease;
+  overflow: hidden;
+
+  h4.title {
+    float: left;
+    width: 100%;
+    line-height: 1.4;
+    font-size: 26px;
+    font-weight: 200;
+    color: rgba(255,255,255,.9);
+    margin-top: 0;
+    margin-bottom: 10px;
+
+  }
+
+  .subtitle {
+    font-size: 13px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    vertical-align: middle;
+    color: $white;
+    opacity: 0.6;
+
+  }
+
+  .second-info {
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    float: left;
+    color: $white;
+
+    .genre {
+      text-transform: uppercase;;
+    }
+
+    .separator {
+      opacity: 0.5;
+    }
+
+    .rating {
+
+    }
+
+  }
+
+
+  .synopsis {
+    float: left;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .6);
+    line-height: 18px;
+    font-size: .85em;
+    max-height: 76px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+
+}
 
 
 

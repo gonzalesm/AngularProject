@@ -14,15 +14,14 @@
           <span class="icon glyphicon glyphicon-play hidden-xs hidden-sm" aria-hidden="true"></span>
         </a>
         <div class="more-infos hidden-xs hidden-sm">
-          <h4 class="title">{{ ::movie.original_title }}</h4>
-          <span class="subtitle">{{ ::movie.release_date }} - {{ ::movie.original_language }}</span>
-          <p class="genre">
-            Drame,
-            Thriller
-          </p>
-          <p class="rating">
-            {{ ::movie.vote_average }} /10
-          </p>
+          <h4 class="title">{{ ::movie.original_title }} <span class="subtitle">({{ ::movie.release_date }} - {{ ::movie.original_language }})</span></h4>
+
+          <div class="second-info">
+            <span class="genre">Drame, Thriller</span>
+            <span class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+            <span class="rating">{{ ::movie.vote_average }} / 10</span>
+          </div>
+
           <p class="synopsis">
               {{ ::movie.overview }}
           </p>
