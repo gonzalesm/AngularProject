@@ -9,6 +9,7 @@
       <h3>{{ ::movie.original_title }}</h3>
 
       <div class="infos">
+<<<<<<< HEAD
         <a href="" class="poster hover-flash">
           <img class="col-xs-12 col-sm-10 col-md-12 col-lg-12" src="http://image.tmdb.org/t/p/w320{{ ::movie.poster_path }}" />
           <span class="icon glyphicon glyphicon-play hidden-xs hidden-sm" aria-hidden="true"></span>
@@ -25,6 +26,59 @@
           <p class="synopsis">
               {{ ::movie.overview }}
           </p>
+||||||| merged common ancestors
+        <div class="poster">
+            <img src="http://image.tmdb.org/t/p/w185{{ ::movie.poster_path }}" />
+        </div>
+        <div class="type"></div>
+        <div class="language">{{ ::movie.original_language }}</div>
+        <div class="createdBy">Created By Avatar</div>
+        <p class="overview">
+          {{ ::movie.overview }}
+        </p>
+        <div class="date">
+            <div class="day">25</div>
+            <div class="month">Dec</div>
+        </div>
+        <div class="Backdrops">
+            <ul>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+            </ul>
+        </div>
+        <div class="popularity-bg">
+            <div class="popularity" style="width: ({{ ::movie.vote_average }}*10)%;"></div>
+        <div>
+          {{ ::movie.vote_average }} /10
+=======
+        <div class="poster">
+            <a href ui-sref="root.movieDetail({ movieId:movie.id })">
+              <img data-ng-src="http://image.tmdb.org/t/p/w185{{ ::movie.poster_path }}" />
+            </a>
+        </div>
+        <div class="type"></div>
+        <div class="language">{{ ::movie.original_language }}</div>
+        <div class="createdBy">Created By Avatar</div>
+        <p class="overview">
+          {{ ::movie.overview }}
+        </p>
+        <div class="date">
+            <div class="day">25</div>
+            <div class="month">Dec</div>
+        </div>
+        <div class="Backdrops">
+            <ul>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+            </ul>
+        </div>
+        <div class="popularity-bg">
+            <div class="popularity" style="width: ({{ ::movie.vote_average }};"></div>
+        <div>
+          {{ ::movie.vote_average }} /10
+>>>>>>> master
         </div>
 
     </li>
