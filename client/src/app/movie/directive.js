@@ -21,8 +21,31 @@
       link: function(scope, elm, attrs) {
       }
     };
-  }
+  };
+
+    function MovieGenres(MovieGenres) {
+      return {
+        restrict: 'EA',
+        replace: true,
+        templateUrl: './src/app/movie/template.html',
+        scope: {},
+        controllerAs: 'vm',
+        bindToController: true,
+        /*jshint unused:false*/
+        controller: function($log) {
+          var vm = this;
+
+          MovieService.getMovie().then(function(data){
+            console.log(data.data.results);
+            vm.movies = data.data.genres;
+          });
+        },
+        link: function(scope, elm, attrs) {
+        }
+      };
+  };
 
   angular.module('moviePopularDirective', ['services.movie'])
-    .directive('moviePopular', MoviePopular);
+    .directive('moviePopular', MoviePopular)
+    .directive('movieGenres', MovieGenres);
 })();
