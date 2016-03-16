@@ -23,7 +23,7 @@
   }
 
   function MainCtrl($log) {
-    $log.debug('MainCtrl laoded!');
+    $log.debug('MainCtrl loaded!');
   }
 
   function run($log) {
@@ -34,6 +34,7 @@
       'ui.router',
       'home',
       'movie-popular',
+      'movie-detail',
       'appHeaderComponent',
       'appFooterComponent',
       'common.filters.uppercase',
