@@ -21,7 +21,7 @@
       link: function(scope, elm, attrs) {
       }
     };
-  }
+  };
 
   function MovieGenres(MovieGenres) {
       return {
