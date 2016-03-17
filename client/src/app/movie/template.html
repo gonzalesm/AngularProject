@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li data-ng-repeat="movie in ::vm.movies track by $index">
+    <li data-ng-repeat="movie in ::vm.movies">
       <h2>{{ ::movie.original_title }}</h2>
 
       <div class="infos">
@@ -9,7 +9,7 @@
         </div>
         <div class="type"></div>
         <div class="language">{{ ::movie.original_language }}</div>
-        <div class="genre">{{ ::movie.genre_ids.join(", ") }}</div>
+        <div class="genre">{{ ::movie.genre.join(", ") }}</div>
         <p class="overview">
           {{ ::movie.overview }}
         </p>
@@ -25,17 +25,8 @@
             </ul>
         </div>
         <div class="popularity-bg">
-            <script>
-              var voteAverage = {{ ::movie.vote_average }} * 10;
-              //document.getElementById('vote_average').setAttribute("style","width:"+voteAverage+"%");
-              document.getElementById('vote_average').style.width=voteAverage +'%';
-              console.log(vote_average);
-              alert(vote_average);
-              alert('testt');
-            </script>
-            <div class="popularity" id="vote_average"></div>
-        <div>
-          {{ ::movie.vote_average }} /10
+            <div class="popularity" id="vote_average" style="width: {{ ::movie.vote }}%">
+            </div>
         </div>
     </li>
   </ul>
