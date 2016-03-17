@@ -1,29 +1,94 @@
-<div>
-  <ul>
-      <h2>{{ ::movie.original_title }}</h2>
+<div class="movie-detail">
+  <div class="bg-style">
+    <i class="bg-image" style="background-image:url(https://image.tmdb.org/t/p/w1000{{ ::vm.movie.poster_path }})"></i>
+  </div>
+  <i class="bg-filter"></i>
 
-      <div class="infos">
-        <div class="poster">
-            <img data-ng-src="http://image.tmdb.org/t/p/w185{{ movie.poster_path }}" />
-        </div>
-        <div class="type"></div>
-        <div class="language"></div>
-        <div class="createdBy">Created By Avatar</div>
-        <p class="overview">
+  <!-- :: -->
 
-        </p>
-        <div class="date">
-            <div class="day">25</div>
-            <div class="month">Dec</div>
+  <div class="movieInfos col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+      <div class="picture col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ng-src="https://image.tmdb.org/t/p/w396/{{ ::vm.movie.poster_path }}" alt="Affiche du film {{ ::vm.movie.original_title }}">
+          <i class="rating">{{ ::vm.movie.vote_average }}</i>
+      </div>
+      <div class="infos col-xs-12 col-sm-6 col-md-8 col-lg-8">
+        <h1 class="title" title="{{ ::vm.movie.original_title }}"><span class="titlo">{{ ::vm.movie.original_title }}</span>
+        </h1>
+        <div class="meta">
+          <div class="bloc">
+            <div class="content-type" >Durée</div>
+            <div class="content">1:35</div>
+          </div>
+          <div class="bloc">
+            <div class="content-type" >Langue</div>
+            <div class="content language">
+              <a href="#">{{ ::vm.movie.original_language }}</a>
+            </div>
+          </div>
+          <div class="bloc">
+            <div class="content-type" >Genres</div>
+              <div class="content"><a href="#">Animation</a>,
+              <a href="#">Aventure</a>,
+              <a href="#">Comédie</a></div>
+          </div>
+          <div class="bloc">
+            <div class="content-type" >Année</div>
+            <div class="content">2016</div>
+          </div>
         </div>
-        <div class="Backdrops">
-            <ul>
-              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
-              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
-              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
-            </ul>
+        <div class="synopsis">
+          {{ ::vm.movie.overview }}
         </div>
-          {{ vm.movie.vote_average }} /10
+        <div class="meta hidden-sm">
+          <div class="bloc">
+            <div class="content-type" >Acteurs</div>
+            <div class="content">Manu Payet, Pierre Arditi, Alison Wheeler</div>
+          </div>
+          <div class="bloc">
+            <div class="content-type" >Réalisateur(s)</div>
+            <div class="content">Jennifer Yuh, Alessandro Carloni</div>
+          </div>
         </div>
-  </ul>
+      </div>
+    </div>
+    <div class="backdrops row">
+        <ul>
+          <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
+          <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
+          <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
+        </ul>
+    </div>
+  </div>
+
+  <!--
+
+  <div class="row">
+    <h2>{{ ::vm.movie.original_title }}</h2>
+
+    <div class="infos">
+      <div class="poster">
+          <img data-ng-src="https://image.tmdb.org/t/p/w185{{ ::vm.movie.poster_path }}" />
+      </div>
+      <div class="type"></div>
+      <div class="language">{{ ::vm.movie.language }}</div>
+      <p class="overview">
+        {{ ::vm.movie.overview }}
+      </p>
+      <div class="date">
+          <div class="day">25</div>
+          <div class="month">Dec</div>
+      </div>
+      <div class="Backdrops">
+          <ul>
+            <li><img src="https://image.tmdb.org/t/p/w185{{ ::vm.movie.backdrop_path }}" /></li>
+            <li><img src="https://image.tmdb.org/t/p/w1000{{ ::vm.movie.backdrop_path }}" /></li>
+            <li><img src="https://image.tmdb.org/t/p/w780{{ ::vm.movie.backdrop_path }}" /></li>
+          </ul>
+      </div>
+        {{ ::vm.movie.vote_average }} /10
+      </div>
+    </div>
+</div>
+-->
 </div>

@@ -135,7 +135,8 @@ body {
   background-color: #212121; }
 
 .l-page {
-  background-color: #212121;
+  /*background-color: #212121;*/
+  background-color: rgba(33, 33, 33, 0.75);
   color: #ddd; }
   .l-page .pure-g > div {
     -webkit-box-sizing: border-box;
@@ -344,6 +345,91 @@ ul.movies {
 
 .display-detail .type, .display-detail .language, .display-detail .createdBy, .display-detail .overview, .display-detail .date, .display-detail .backdrops, .display-detail .popularity-bg {
   display: none; }
+
+/* MOVIE DETAIL PAGE */
+.movie-detail .infos {
+  background-opacity: 0.5; }
+
+.bg-style {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 71px;
+  height: 510px;
+  overflow: hidden;
+  z-index: -2; }
+  .bg-style .bg-image {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    top: -10%;
+    bottom: -10%;
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.75);
+    -webkit-filter: blur(3px) brightness(0.75);
+    -moz-filter: blur(3px) brightness(0.75);
+    -ms-filter: blur(3px) brightness(0.75);
+    -o-filter: blur(3px) brightness(0.75); }
+
+.bg-filter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 581px;
+  background: linear-gradient(to bottom right, #7C7C7C, #373737);
+  opacity: 0.3;
+  z-index: -1; }
+
+.movieInfos .synopsis {
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.movieInfos .infos .meta {
+  font-size: 17px; }
+  .movieInfos .infos .meta .bloc {
+    display: block; }
+    .movieInfos .infos .meta .bloc .content-type {
+      text-transform: uppercase;
+      font-weight: 300;
+      width: 200px;
+      float: left; }
+    .movieInfos .infos .meta .bloc .content {
+      text-transform: capitalize; }
+    .movieInfos .infos .meta .bloc .language {
+      text-transform: uppercase; }
+  .movieInfos .infos .meta a {
+    color: white;
+    text-decoration: none;
+    transition: color 200ms ease; }
+    .movieInfos .infos .meta a:hover {
+      color: #2ecc40; }
+
+.picture img {
+  position: relative; }
+
+.picture i.rating {
+  position: absolute;
+  color: #ffd500;
+  top: 15px;
+  right: 50px;
+  font-size: 18px;
+  padding: 5px;
+  background-color: rgba(44, 44, 44, 0.72); }
+
+.backdrops > ul {
+  padding: 15px;
+  margin: 0; }
+  .backdrops > ul li {
+    list-style: none; }
+  .backdrops > ul img {
+    margin-top: 15px; }
 
 .popularity-bg {
   height: 15px;
