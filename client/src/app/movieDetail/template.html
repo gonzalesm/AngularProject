@@ -1,12 +1,10 @@
 <div>
   <ul>
-      <h2>{{ ::vm.movie.original_title }}</h2>
-
-
+      <h2>{{ ::movie.original_title }}</h2>
 
       <div class="infos">
         <div class="poster">
-            <img data-ng-src="http://image.tmdb.org/t/p/w185{{ ::vm.movie.poster_path }}" />
+            <img data-ng-src="http://image.tmdb.org/t/p/w185{{ movie.poster_path }}" />
         </div>
         <div class="type"></div>
         <div class="language"></div>
@@ -18,7 +16,13 @@
             <div class="day">25</div>
             <div class="month">Dec</div>
         </div>
-
+        <div class="Backdrops">
+            <ul>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+              <li><img src="http://image.tmdb.org/t/p/w185{{ ::movie.backdrop_path }}" /></li>
+            </ul>
+        </div>
           {{ vm.movie.vote_average }} /10
         </div>
   </ul>
