@@ -1,11 +1,11 @@
 (function() {
   'use strict';
 
-  function MoviePopular(MovieService) {
+  function movieLatest(movieLatestService) {
     return {
       restrict: 'EA',
       replace: true,
-      templateUrl: './src/app/movie/template.html',
+      templateUrl: './src/app/movieLatest/template.html',
       scope: {},
       controllerAs: 'vm',
       bindToController: true,
@@ -13,9 +13,9 @@
       controller: function($log) {
         var vm = this;
 
-        MovieService.getMovie().then(function(data){
-          console.log(data.data.results);
-          vm.movies = data.data.results;
+        movieLatestService.getMovie().then(function(data){
+          console.log(data.data);
+          vm.movie = data.data;
         });
       },
       link: function(scope, elm, attrs) {
@@ -25,6 +25,6 @@
 
 
 
-  angular.module('moviePopularDirective', ['services.movie'])
-    .directive('moviePopular', MoviePopular);
+  angular.module('movieLatestDirective', ['services.movieLatest'])
+    .directive('movieLatest', movieLatest);
 })();

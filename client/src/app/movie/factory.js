@@ -26,9 +26,7 @@
           console.log('error');
         });
     };
-
     return service;
-
   }
 
   angular.module('services.movie', [])
