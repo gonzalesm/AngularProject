@@ -13,15 +13,9 @@
           <i class="rating">{{ ::vm.movie.vote_average }}</i>
       </div>
       <div class="infos col-xs-12 col-sm-6 col-md-8 col-lg-8">
-        <h1 class="title" title="{{ ::vm.movie.original_title }}"><span class="titlo">{{ ::vm.movie.original_title }}</span>
-        </h1>
-        <h2 class="tagline" title="{{ ::vm.movie.tagline }}"><span class="titlo">{{ ::vm.movie.tagline }}</span>
-        </h2>
+        <h1 class="title" title="{{ ::vm.movie.original_title }}">{{ ::vm.movie.original_title }}</h1>
+        <div class="tagline" title="{{ ::vm.movie.tagline }}">{{ ::vm.movie.tagline }}</div>
         <div class="meta">
-          <div class="bloc">
-            <div class="content-type">Durée</div>
-            <div class="content">1:35</div>
-          </div>
           <div class="bloc">
             <div class="content-type">Langue</div>
             <div class="content language">
@@ -35,8 +29,8 @@
               </div>
           </div>
           <div class="bloc">
-            <div class="content-type">Année</div>
-            <div class="content">2016</div>
+            <div class="content-type">Date de réalisation</div>
+            <div class="content">{{ ::vm.movie.release_date }}</div>
           </div>
         </div>
         <div class="synopsis">

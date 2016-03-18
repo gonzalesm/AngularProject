@@ -427,6 +427,7 @@ ul.movies {
         font-weight: 300;
         width: 200px;
         float: left;
+        opacity: 0.6;
       }
 
       .content {
@@ -451,6 +452,19 @@ ul.movies {
     }
   }
 }
+
+.infos {
+  h1 {
+    margin-bottom: 7px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+}
+
 .picture {
   img {
     position: relative;

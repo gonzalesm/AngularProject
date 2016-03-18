@@ -414,7 +414,8 @@ ul.movies {
       text-transform: uppercase;
       font-weight: 300;
       width: 200px;
-      float: left; }
+      float: left;
+      opacity: 0.6; }
     .movieInfos .infos .meta .bloc .content {
       text-transform: capitalize; }
     .movieInfos .infos .meta .bloc .language {
@@ -425,6 +426,14 @@ ul.movies {
     transition: color 200ms ease; }
     .movieInfos .infos .meta a:hover {
       color: #2ecc40; }
+
+.infos h1 {
+  margin-bottom: 7px; }
+
+.infos .tagline {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-style: italic; }
 
 .picture img {
   position: relative; }
