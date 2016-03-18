@@ -35,6 +35,7 @@
       'home',
       'movie-popular',
       'movie-detail',
+      'search',
       'appHeaderComponent',
       'appFooterComponent',
       'common.filters.uppercase',
