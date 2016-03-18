@@ -16,7 +16,7 @@
         movieLatestService.getMovieLatest().then(function(data){
 
           vm.movieLatest = data.data;
-          console.log(data.data.results);
+          console.log(data.data);
         });
       },
       link: function(scope, elm, attrs) {

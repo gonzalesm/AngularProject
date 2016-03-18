@@ -16,8 +16,7 @@
 
       return $http.get('https://api.themoviedb.org/3/movie/popular', {
           params:{
-            api_key: key,
-            page:1
+            api_key: key
           }
         })
         .success(function (data) {

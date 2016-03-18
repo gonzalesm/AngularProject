@@ -1,20 +1,22 @@
 (function() {
   'use strict';
 
-  function movieDetail(movieDetailService) {
+  function search(searchService) {
     return {
       restrict: 'EA',
       replace: true,
-      templateUrl: './src/app/movieDetail/template.html',
+      templateUrl: './src/app/search/template.html',
       scope: {},
       controllerAs: 'vm',
       bindToController: true,
       /*jshint unused:false*/
       controller: function($log, $stateParams) {
-
         var vm = this;
-        movieDetailService.getMovie().then(function(response){
-        vm.movie = response.data;
+
+        searchService.getSearch().then(function(data){
+
+          vm.movies = data.data.results;
+          console.log(data.data);
         });
       },
       link: function(scope, elm, attrs) {
@@ -22,6 +24,8 @@
     };
   }
 
-  angular.module('movieDetailDirective', ['services.movieDetail'])
-    .directive('movieDetail', movieDetail);
+
+
+  angular.module('searchDirective', ['services.search'])
+    .directive('search', search);
 })();

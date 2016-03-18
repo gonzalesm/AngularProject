@@ -13,9 +13,10 @@
       controller: function($log) {
         var vm = this;
 
-        movieTopRatedService.getMovieTopRated().then(function(data){
-          console.log(data.data);
-          vm.movies = data.data;
+        movieTopRatedService.getMovie().then(function(data){
+
+          vm.movies = data.data.results;
+          console.log(data.data.results);
         });
       },
       link: function(scope, elm, attrs) {

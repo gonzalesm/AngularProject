@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function MovieTopRatedService($http, $log) {
+  function movieTopRatedService($http, $log) {
 
     var service = {};
 
@@ -10,7 +10,7 @@
     /**
      * Get Movie
      */
-    service.getMovieTopRated = function () {
+    service.getMovie = function () {
 
       var key = '5bb1ba18b86c3125820db6f794cd67dd';
 
@@ -30,5 +30,5 @@
   }
 
   angular.module('services.movieTopRated', [])
-    .factory('MovieTopRatedService', MovieTopRatedService);
+    .factory('movieTopRatedService', movieTopRatedService);
 })();

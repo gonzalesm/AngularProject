@@ -37,6 +37,7 @@
       'movie-detail',
       'movie-latest',
       'movieTopRated',
+      'search',
       'appHeaderComponent',
       'appFooterComponent',
       'common.filters.uppercase',

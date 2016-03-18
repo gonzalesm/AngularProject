@@ -8,5 +8,11 @@
     </li>
     <li ui-sref-active="pure-menu-selected"><a href ui-sref="root.movieTopRated">{{ 'top rated' | uppercase }}</a>
     </li>
+    <li ui-sref-active="pure-menu-selected">
+      Search: <input ng-model="query">
+    </li>
+    <li ui-sref-active="pure-menu-selected">
+    <div class="searchbutton"><a href ui-sref="root.search({query : query})">{{'search' | uppercase}}</a></div>
+    </li>
   </ul>
 </div>

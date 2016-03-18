@@ -7,16 +7,16 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.movieTopRated', {
-        url: '/movieTopRated',
+      .state('root.search', {
+        url: '/search/:query',
         views: {
           '@': {
-            template: '<movieTopRated></movieTopRated>',
+            template: '<search></search>',
           }
         }
       });
   }
 
-  angular.module('movieTopRated', ['movieTopRatedDirective'])
+  angular.module('search', ['searchDirective'])
     .config(config)
 })();
