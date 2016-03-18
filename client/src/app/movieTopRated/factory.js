@@ -1,23 +1,22 @@
 (function() {
   'use strict';
 
-  function MovieService($http, $log) {
+  function MovieTopRatedService($http, $log) {
 
     var service = {};
 
-    service.movie = []; // MovieService.movie = [];
+    service.movieTopRated = []; // MovieService.movie = [];
 
     /**
      * Get Movie
      */
-    service.getMovie = function () {
+    service.getMovieTopRated = function () {
 
       var key = '5bb1ba18b86c3125820db6f794cd67dd';
 
-      return $http.get('https://api.themoviedb.org/3/movie/popular', {
+      return $http.get('https://api.themoviedb.org/3/movie/top_rated', {
           params:{
-            api_key: key,
-            page:1
+            api_key: key
           }
         })
         .success(function (data) {
@@ -30,6 +29,6 @@
     return service;
   }
 
-  angular.module('services.movie', [])
-    .factory('MovieService', MovieService);
+  angular.module('services.movieTopRated', [])
+    .factory('MovieTopRatedService', MovieTopRatedService);
 })();

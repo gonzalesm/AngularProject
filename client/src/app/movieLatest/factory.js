@@ -1,26 +1,28 @@
 (function() {
   'use strict';
 
-  function MovieLatestService($http, $log) {
+  function movieLatestService($http, $log) {
 
     var service = {};
 
-    service.movieLatest = []; // MovieService.movie = [];
+    service.movieLatest = []; // movieLatestService.movieLatest = [];
 
     /**
      * Get Movie
      */
-    service.getMovie = function () {
+    service.getMovieLatest = function () {
 
       var key = '5bb1ba18b86c3125820db6f794cd67dd';
 
       return $http.get('https://api.themoviedb.org/3/movie/latest', {
           params:{
-            api_key: key
+            api_key: key,
+            page: 1
           }
         })
         .success(function (data) {
           service.media = data;
+          console.log(service.media);
         })
         .error(function () {
           console.log('error');
@@ -30,5 +32,5 @@
   }
 
   angular.module('services.movieLatest', [])
-    .factory('movieLatestService', MovieLatestService);
+    .factory('movieLatestService', movieLatestService);
 })();

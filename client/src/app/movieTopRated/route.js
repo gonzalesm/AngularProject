@@ -7,16 +7,16 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.movieLatest', {
-        url: '/movieLatest',
+      .state('root.movieTopRated', {
+        url: '/movie/movieTopRated',
         views: {
           '@': {
-            template: '<movie-latest></movie-latest>',
+            template: '<movieTopRated></movieTopRated>',
           }
         }
       });
   }
 
-  angular.module('movie-latest', ['movieLatestDirective'])
+  angular.module('movieTopRated', ['movieTopRatedDirective'])
     .config(config)
 })();
