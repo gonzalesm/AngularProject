@@ -14,9 +14,8 @@
         var vm = this;
 
         searchService.getSearch().then(function(data){
-
           vm.movies = data.data.results;
-          console.log(data.data);
+          
         });
       },
       link: function(scope, elm, attrs) {

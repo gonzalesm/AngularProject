@@ -19,7 +19,8 @@
           vm.movie.vote = (vm.movie.vote_average*10);
           vm.movie.genres_name = [];
           for (var i = 0; i <= vm.movie.genres.length-1; i++) {
-            vm.movie.genres_name.unshift(vm.movie.genres[i].name);
+            vm.movie.genres_name.push(vm.movie.genres[i].name);
+            vm.movie.genres_name.sort();
           }
         });
       },

@@ -28,7 +28,8 @@
                   var k = vm.movies[i].genre_ids.length-1;
                   while (k>=0) {
                     if(vm.movies[i].genre_ids[k] == vm.genres[j].id){
-                      vm.movies[i].genre.unshift(vm.genres[j].name);
+                      vm.movies[i].genre.push(vm.genres[j].name);
+                      vm.movies[i].genre.sort();
                     }
                     k--;
                   }

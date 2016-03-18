@@ -1,29 +1,30 @@
 <div>
-  <ul>
-    <li data-ng-repeat="movie in ::vm.movies track by $index">
+  <h1> {{ ::vm.stateParams.query }} </h1>
+  <ul class="movies display-detail">
+    <li class="movie-single col-xs-6 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="movie in ::vm.movies">
       <h2>{{ ::movie.original_title }}</h2>
 
       <div class="infos">
-        <div class="poster">
-            <a href ui-sref="root.movieDetail({ movieId:movie.id })">
-              <img data-ng-src="http://image.tmdb.org/t/p/w185{{ ::movie.poster_path }}" />
-            </a>
-        </div>
-        <div class="type"></div>
-        <div class="language">{{ ::movie.original_language }}</div>
-        <div class="createdBy">Created By Avatar</div>
-        <p class="overview">
-          {{ ::movie.overview }}
-        </p>
-        <div class="date">
-            <div class="day">25</div>
-            <div class="month">Dec</div>
-        </div>
-        <div class="popularity-bg">
-            <div class="popularity" style="width: {{ ::movie.vote_average }};"></div>
-        <div>
-          {{ ::movie.vote_average }} /10
-        </div>
+        <a href ui-sref="root.movieDetail({ movieId:movie.id })" class="poster hover-flash">
+          <img class="col-xs-12 col-sm-10 col-md-12 col-lg-12" data-ng-src="http://image.tmdb.org/t/p/w320{{ ::movie.poster_path }}" />
+          <span class="icon glyphicon glyphicon-play hidden-xs hidden-sm" aria-hidden="true"></span>
+        </a>
+        <div class="more-infos hidden-xs hidden-sm">
+          <h3 class="title">{{ ::movie.original_title }}</h3>
+
+          <div class="second-info">
+            <div class="genre">{{ ::movie.genre.join(", ") }}</div>
+            <div class="rating">
+              <div class="popularity-bg">
+                <div class="popularity" id="vote_average" style="width: {{ ::movie.vote }}%"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="synopsis">
+              {{ ::movie.overview }}
+          </p>
     </li>
   </ul>
 </div>

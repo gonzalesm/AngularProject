@@ -83,6 +83,11 @@ body {
   }
 
 }
+form.navbar-form.navbar-right {
+  border-color: #4D4C4C;
+
+}
+
 
 /* Footer Style */
 
@@ -336,6 +341,7 @@ ul.movies {
 .movie-detail {
   .infos {
     background-opacity: 0.5;
+
   }
 
 }
@@ -463,6 +469,11 @@ ul.movies {
     font-size: 18px;
     margin-bottom: 10px;
     font-style: italic;
+  }
+
+  .rate {
+    margin-bottom: 10px;
+
   }
 }
 

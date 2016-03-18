@@ -186,6 +186,9 @@ body {
         color: #fff;
         background-color: #424242; }
 
+form.navbar-form.navbar-right {
+  border-color: #4D4C4C; }
+
 /* Footer Style */
 footer {
   padding: 15px;
@@ -435,6 +438,9 @@ ul.movies {
   font-size: 18px;
   margin-bottom: 10px;
   font-style: italic; }
+
+.infos .rate {
+  margin-bottom: 10px; }
 
 .picture img {
   position: relative; }
