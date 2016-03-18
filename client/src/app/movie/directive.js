@@ -14,11 +14,9 @@
         var vm = this;
 
         MovieService.getMovie().then(function(data){
-          console.log(data.data.results);
           vm.movies = data.data.results;
           for (var i=0; i<=vm.movies.length-1; i++) {
             vm.movies[i].vote = (vm.movies[i].vote_average*10);
-            console.log('note :', vm.movies[i].vote);
           }
           MovieService.getGenre().then(function(data){
               vm.genres = data.data.genres;

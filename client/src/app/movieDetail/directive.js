@@ -13,7 +13,6 @@
       controller: function($log, $stateParams) {
         var vm = this;
 
-        console.log($stateParams);
         movieDetailService.getMovie().then(function(response){
           vm.movie = response.data;
           vm.movie.vote = (vm.movie.vote_average*10);

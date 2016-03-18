@@ -189,6 +189,29 @@ body {
 form.navbar-form.navbar-right {
   border-color: #4D4C4C; }
 
+.form-control {
+  border-radius: 5px 0px 0px 5px;
+  padding-left: 20px; }
+
+.search-btn {
+  height: 54px;
+  margin-left: -5px;
+  border-radius: 0px 5px 5px 0px; }
+
+@media (max-width: 767px) {
+  .navbar-form {
+    height: 76px; }
+    .navbar-form .form-group {
+      width: 80%;
+      display: inline-block;
+      float: left; }
+  .search-btn {
+    width: 20%;
+    display: inline-block; } }
+
+.form-control {
+  height: 54px; }
+
 /* Footer Style */
 footer {
   padding: 15px;
