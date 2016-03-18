@@ -7,10 +7,10 @@
   <!-- :: -->
 
   <div class="movieInfos col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div class="row">
+    <div class="row">
       <div class="picture col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ng-src="https://image.tmdb.org/t/p/w396/{{ ::vm.movie.poster_path }}" alt="Affiche du film {{ ::vm.movie.original_title }}">
-          <i class="rating">{{ ::vm.movie.vote_average }}</i>
+        <img class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ng-src="https://image.tmdb.org/t/p/w396/{{ ::vm.movie.poster_path }}" alt="Affiche du film {{ ::vm.movie.original_title }}">
+        <i class="rating">{{ ::vm.movie.vote_average }}</i>
       </div>
       <div class="infos col-xs-12 col-sm-6 col-md-8 col-lg-8">
         <h1 class="title" title="{{ ::vm.movie.original_title }}">{{ ::vm.movie.original_title }}</h1>
@@ -27,7 +27,7 @@
               <div class="content">
                 <a href="#">{{ ::vm.genre.join(", ") }}</a>
               </div>
-          </div>
+            </div>
           <div class="bloc">
             <div class="content-type">Date de réalisation</div>
             <div class="content">{{ ::vm.movie.release_date }}</div>
@@ -46,14 +46,19 @@
             <div class="content">{{ ::vm.movie.production_companies.join(", ") }}</div>
           </div>
         </div>
+        <div class="rating">
+          <div class="popularity-bg">
+            <div class="popularity" id="vote_average" style="width: {{ ::vm.movie.vote }}%"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="backdrops row">
-        <ul>
-          <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
-          <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
-          <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
-        </ul>
-    </div>
+  </div>
+  <div class="backdrops row">
+      <ul>
+        <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
+        <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
+        <li><img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" src="https://image.tmdb.org/t/p/w1000/{{ ::vm.movie.backdrop_path }}" /></li>
+      </ul>
   </div>
 </div>
