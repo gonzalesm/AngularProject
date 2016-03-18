@@ -343,9 +343,6 @@ ul.movies {
       text-overflow: ellipsis;
       overflow: hidden; } }
 
-.display-detail .type, .display-detail .language, .display-detail .createdBy, .display-detail .overview, .display-detail .date, .display-detail .backdrops, .display-detail .popularity-bg {
-  display: none; }
-
 /* MOVIE DETAIL PAGE */
 .movie-detail .infos {
   background-opacity: 0.5; }
@@ -433,8 +430,8 @@ ul.movies {
 
 .popularity-bg {
   height: 15px;
-  width: 200px;
-  background-color: #ccc; }
+  width: 100%;
+  background-color: #ddd; }
 
 .popularity {
   height: 15px;

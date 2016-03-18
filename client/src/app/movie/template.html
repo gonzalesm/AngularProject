@@ -1,11 +1,6 @@
 <div>
-  <ul class="genre-list display-detail">
-    <li data-ng-repeat="movie in ::vm.genres track by $index">
-      {{ ::vm.genres }}
-    </li>
-  </ul>
   <ul class="movies display-detail">
-    <li class="movie-single col-xs-6 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="movie in ::vm.movies track by $index">
+    <li class="movie-single col-xs-6 col-sm-4 col-md-3 col-lg-2" data-ng-repeat="movie in ::vm.movies">
       <h3>{{ ::movie.original_title }}</h3>
 
       <div class="infos">
@@ -17,9 +12,14 @@
           <h4 class="title">{{ ::movie.original_title }} <span class="subtitle">({{ ::movie.release_date }} - {{ ::movie.original_language }})</span></h4>
 
           <div class="second-info">
-            <span class="genre">Drame, Thriller</span>
-            <span class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-            <span class="rating">{{ ::movie.vote_average }} / 10</span>
+            <div class="genre">{{ ::movie.genre.join(", ") }}</div>
+            <div class="rating">
+              <div class="popularity-bg">
+                <div class="popularity" id="vote_average" style="width: {{ ::movie.vote }}%"></div>
+              </div>
+              {{ ::movie.vote_average }} / 10
+            </div>
+
           </div>
 
           <p class="synopsis">

@@ -330,14 +330,6 @@ ul.movies {
   }
 }
 
-.display-detail {
-
-  .type, .language, .createdBy, .overview, .date, .backdrops, .popularity-bg {
-    display: none;
-  }
-
-}
-
 /* MOVIE DETAIL PAGE */
 
 .movie-detail {
@@ -466,8 +458,8 @@ ul.movies {
 
 .popularity-bg {
   height: 15px;
-  width: 200px;
-  background-color: #ccc;
+  width: 100%;
+  background-color: $silver;
 }
 .popularity {
   height: 15px;
