@@ -20,21 +20,21 @@
             vm.movies[i].vote = (vm.movies[i].vote_average*10);
             console.log('note :', vm.movies[i].vote);
           }
-        });
-        MovieService.getGenre().then(function(data){
-            vm.genres = data.data.genres;
-            for (var i=0; i<=vm.movies.length-1; i++) {
-              vm.movies[i].genre = [];
-              for (var j=0; j<=vm.genres.length-1; j++) {
-                var k = vm.movies[i].genre_ids.length-1;
-                while (k>=0) {
-                  if(vm.movies[i].genre_ids[k] == vm.genres[j].id){
-                    vm.movies[i].genre.unshift(vm.genres[j].name);
+          MovieService.getGenre().then(function(data){
+              vm.genres = data.data.genres;
+              for (var i=0; i<=vm.movies.length-1; i++) {
+                vm.movies[i].genre = [];
+                for (var j=0; j<=vm.genres.length-1; j++) {
+                  var k = vm.movies[i].genre_ids.length-1;
+                  while (k>=0) {
+                    if(vm.movies[i].genre_ids[k] == vm.genres[j].id){
+                      vm.movies[i].genre.unshift(vm.genres[j].name);
+                    }
+                    k--;
                   }
-                  k--;
                 }
               }
-            }
+          });
         });
       },
       link: function(scope, elm, attrs, ctrl) {

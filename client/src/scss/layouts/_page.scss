@@ -131,7 +131,7 @@ ul.movies {
 
     }
 
-    h3 {
+    h2 {
       font-size: 20px;
       text-overflow: ellipsis;
       height: 25px;
@@ -205,7 +205,7 @@ ul.movies {
   position: absolute;
   height: 241px;
   width: 351px;
-  top: 52.5px;
+  top: 49.5px;
   left: 205px;
   visibility: hidden;
   z-index: 2;
@@ -215,7 +215,7 @@ ul.movies {
   transition: .2s all ease;
   overflow: hidden;
 
-  h4.title {
+  h3.title {
     float: left;
     width: 100%;
     line-height: 1.4;
@@ -245,7 +245,8 @@ ul.movies {
     color: $white;
 
     .genre {
-      text-transform: uppercase;;
+      text-transform: capitalize;
+      margin-bottom: 10px;
     }
 
     .separator {
@@ -264,7 +265,7 @@ ul.movies {
     color: rgba(255, 255, 255, .6);
     line-height: 18px;
     font-size: .85em;
-    max-height: 76px;
+    height: 76px;
     text-overflow: ellipsis;
     overflow: hidden;
 
@@ -284,14 +285,14 @@ ul.movies {
   }
 
   .more-infos {
-    height: 308px;
+    height: 309px;
     width: 206px;
-    top: 52.5px;
+    top: 49.5px;
     left: 250px;
     padding: 20px;
     padding-top: 14px;
 
-    h4.title {
+    h3.title {
       line-height: 1.1;
       width: 100%;
       font-size: 26px;
@@ -471,14 +472,20 @@ ul.movies {
 
   }
 
-  i.rating {
+  .rating {
     position: absolute;
-    color: rgb(255, 213, 0);
+    color: #FFAD00;
     top: 15px;
     right: 50px;
     font-size: 18px;
     padding: 5px;
     background-color: rgba(44, 44, 44, 0.72);
+
+    img {
+      height: 18px;
+      width: auto;
+      padding-bottom: 2px;
+    }
   }
 
 }
@@ -499,11 +506,13 @@ ul.movies {
 }
 
 .popularity-bg {
-  height: 15px;
-  width: 100%;
-  background-color: $silver;
+  height: 22px;
+  width: 120px;
+  background-image: url(/assets/images/star-empty.png);
+  background-repeat: no-repeat;
 }
 .popularity {
-  height: 15px;
-  background-color: yellow;
+  height: 22px;
+  background-image: url(/assets/images/star-full.png);
+  background-repeat: no-repeat;
 }
