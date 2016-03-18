@@ -134,6 +134,14 @@ h4 {
 body {
   background-color: #212121; }
 
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 200ms ease; }
+  a:hover {
+    color: #2ecc40;
+    text-decoration: none; }
+
 .l-page {
   /*background-color: #212121;*/
   background-color: rgba(33, 33, 33, 0.75);
@@ -217,9 +225,14 @@ footer {
   padding: 15px;
   background-color: #2C2C2C;
   border-top: 1px solid #4D4C4C;
-  color: #fff; }
+  color: #FFF; }
   footer .copyright {
-    margin-bottom: 10px; }
+    padding: 20px 0px; }
+  footer a {
+    color: #AAA; }
+    footer a:hover {
+      color: #FFF;
+      text-decoration: none; }
 
 /* Movie Style */
 ul.movies {
@@ -379,7 +392,7 @@ ul.movies {
   left: 0;
   right: 0;
   top: 71px;
-  height: 510px;
+  height: 502px;
   overflow: hidden;
   z-index: -2; }
   .bg-style .bg-image {
@@ -403,7 +416,7 @@ ul.movies {
   left: 0;
   right: 0;
   top: 0;
-  height: 581px;
+  height: 573px;
   background: linear-gradient(to bottom right, #7C7C7C, #373737);
   opacity: 0.3;
   z-index: -1; }

@@ -47,11 +47,11 @@
         <div class="meta hidden-sm">
           <div class="bloc">
             <div class="content-type">Country</div>
-            <div class="content">{{ ::vm.movie.production_countries[0]['name'] }}</div>
+            <div class="content">{{ ::vm.movie.production_countries_name.join(", ") }}</div>
           </div>
           <div class="bloc">
             <div class="content-type">Prod. companies</div>
-            <div class="content">{{ ::vm.movie.production_companies.join(", ") }}</div>
+            <div class="content">{{ ::vm.movie.production_companies_name.join(", ") }}</div>
           </div>
         </div>
       </div>
