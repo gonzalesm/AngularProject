@@ -381,6 +381,24 @@ ul.movies {
   opacity: 0.3;
   z-index: -1; }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bg-style {
+    height: 450px; }
+  .bg-filter {
+    height: 521px; } }
+
+@media (min-width: 750px) and (max-width: 991px) {
+  .bg-style {
+    height: 480px; }
+  .bg-filter {
+    height: 551px; } }
+
+@media (max-width: 749px) {
+  .bg-style {
+    height: 470px; }
+  .bg-filter {
+    height: 541px; } }
+
 .movieInfos .synopsis {
   font-size: 17px;
   line-height: 1.3;
